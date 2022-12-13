@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center" >
-    <v-col lg="10" md="12" xs="4" id="apartcard" class="d-flex flex-row flex-wrap  align-start">
+    <v-col lg="12" sm="12" md="12" xs="4" id="apartcard" class="d-flex flex-row flex-wrap  align-start">
       <v-card
       v-for="(aprt, i) in apartments" :key="i"
         id="cardapart"
@@ -9,7 +9,7 @@
       >
         <v-img
           height="217"
-          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          :src="aprt.img"
         ></v-img>
         <v-card-title class="pb-0" color="fcolor--text">{{aprt.name}}</v-card-title>
         <v-card-text>
@@ -18,7 +18,7 @@
           </div>
         </v-card-text>
         <v-col class="d-flex flex-row align-center">
-          <div class="d-flex flex-row align-flex-end pr-5">
+          <div class="d-flex flex-row align-flex-end pr-11">
               <v-icon color="darkbg">mdi-account</v-icon>
               <h5>{{aprt.guest}}</h5>
           </div>
@@ -37,7 +37,18 @@
               <h5>{{aprt.loveser}}</h5>
           </div>
         </v-col>
-    
+        <v-col justify="center" align="center"  >
+          <v-btn id="btnapart" large class="scolor">
+            <v-col  class="d-flex flex-column ">
+              <v-card-text id="price" class="pb-0 pt-2 white--text subtitle-1">
+               {{aprt.price}} / Night
+              </v-card-text>
+              <v-card-text class="pb-0 pt-0 white--text font-weight-light">
+                Check Availability
+              </v-card-text>
+            </v-col>
+          </v-btn>
+        </v-col>
       </v-card>
     </v-col>
   </v-row>
@@ -47,14 +58,14 @@
 export default {
   data: () => ({
       apartments:[
-        {name:'Saoirse', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
-        {name:'Varenna', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
-        {name:'Sequoia', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
-        {name:'Melina', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
-        {name:'Saoirse', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
-        {name:'Varenna', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
-        {name:'Sequoia', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
-        {name:'Melina', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool'},
+        {name:'Saoirse', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Saoirse Lake View Residence.webp'},
+        {name:'Varenna', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Varenna Lake View Residence.webp'},
+        {name:'Sequoia', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Sequoia Akoya.webp'},
+        {name:'Melina', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Melina Akoya.webp'},
+        {name:'Saoirse', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Saoirse Lake View Residence.webp'},
+        {name:'Varenna', compound:'Lake View Residence', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Varenna Lake View Residence.webp'},
+        {name:'Sequoia', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Sequoia Akoya.webp'},
+        {name:'Melina', compound:'Akoya', guest:'6 Guests', bedroom:'3 bedrooms' , bathroom:'3 bathrooms', loveser:'Privte Pool', price:'135$', img:'/Melina Akoya.webp'},
       ]
   }),
 }
@@ -68,5 +79,18 @@ export default {
 
 #cardapart{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#btnapart{
+border-radius: 15px;
+position: absolute;
+width: 190px;
+height: 45px;
+left: 17%;
+top: 410px;
+}
+
+#price{
+  line-height: 10px;
 }
 </style>

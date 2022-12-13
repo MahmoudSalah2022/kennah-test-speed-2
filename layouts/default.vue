@@ -1,19 +1,19 @@
 <template>
   <v-app >
     <!-- Start header -->
-    <v-app-bar color="white" :clipped-left="clipped" flat >
+    <v-app-bar color="white" :clipped-left="clipped" flat class=" mt-3 mb-3">
      <NavBar/>
     </v-app-bar>
     <!-- End header -->
     <!-- Start page Content -->
     <v-main>
       <v-container >
-          <ApartCard />
+          <Nuxt />
       </v-container>
     </v-main>
     <!-- end page Content -->
     <!-- Start Footer -->
-    <v-footer color="white" :absolute="!fixed" app class="logo py-4 d-flex justify-center flex-column"
+    <v-footer color="white" class="logo d-flex justify-center flex-column mt-10"
     >
       <FooterSec/>
       <span>Copyright &copy; {{ new Date().getFullYear() }} Kennah</span>
