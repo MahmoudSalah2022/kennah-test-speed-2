@@ -62,7 +62,7 @@
                     </v-col>
                 </nav>
                 <nav  class="d-md-none d-flex justify-center align-center mt-3 mb-3">
-                    <v-col cols="2" >
+                    <!-- <v-col cols="2" >
                     <div justify="center" align="center">
                         <v-img
                         height="46"
@@ -71,8 +71,8 @@
                         contain
                         ></v-img>
                     </div>
-                    </v-col>
-                    <v-col cols="10" >
+                    </v-col> -->
+                    <v-col cols="12" >
                         <div id="searchbar" class="d-flex white elevation-4 rounded-xl" justify="center" align="center">
                             <div>Check in <strong>15 Jan</strong> </div>
                             <div>|</div>
