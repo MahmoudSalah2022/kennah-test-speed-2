@@ -67,7 +67,7 @@
                         <v-img
                         height="46"
                         width="92"
-                        src="/Mask group (1).png"
+                        src="/Mask group (1).webp"
                         contain
                         ></v-img>
                     </div>
