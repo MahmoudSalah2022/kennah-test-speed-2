@@ -4,7 +4,7 @@
       <v-card
       v-for="(aprt, i) in apartments" :key="i"
         id="cardapart"
-        class="mx-auto my-5"
+        class="mx-auto mt-16"
         max-width="280"  
       >
         <v-img
@@ -17,24 +17,24 @@
             {{aprt.compound}}
           </div>
         </v-card-text>
-        <v-col class="d-flex flex-row align-center">
+        <v-col class="d-flex flex-row align-center pt-7">
           <div class="d-flex flex-row align-flex-end pr-11">
-              <v-icon color="darkbg">mdi-account</v-icon>
-              <h5>{{aprt.guest}}</h5>
+              <v-icon color="darkbg " class="pr-1">mdi-account</v-icon>
+              <h5 class="text-subtitle-2">{{aprt.guest}}</h5>
           </div>
           <div class="d-flex flex-row align-flex-end">
-              <v-icon color="darkbg">mdi-bed</v-icon>
-              <h5>{{aprt.bedroom}}</h5>
+              <v-icon color="darkbg " class="pr-1">mdi-bed</v-icon>
+              <h5 class="text-subtitle-2">{{aprt.bedroom}}</h5>
           </div>
         </v-col>
-        <v-col  class="d-flex flex-row align-center">
+        <v-col  class="d-flex flex-row align-center pt-0">
           <div class="d-flex flex-row align-flex-end pr-5">
-              <v-icon color="darkbg">mdi-bathtub</v-icon>
-              <h5>{{aprt.bathroom}}</h5>
+              <v-icon color="darkbg " class="pr-1">mdi-bathtub</v-icon>
+              <h5 class="text-subtitle-2">{{aprt.bathroom}}</h5>
           </div>
           <div class="d-flex flex-row align-flex-end">
-              <v-icon color="darkbg">mdi-heart</v-icon>
-              <h5>{{aprt.loveser}}</h5>
+              <v-icon color="darkbg " class="pr-1">mdi-heart</v-icon>
+              <h5 class="text-subtitle-2">{{aprt.loveser}}</h5>
           </div>
         </v-col>
         <v-col justify="center" align="center"  >
