@@ -1,5 +1,5 @@
 <template >
-    <v-container  color =" black" >
+    <v-container  color =" black" class="px-2" >
         <v-row justify="center" align="center" >
             <v-col sm="12" md="12" lg="12" >
                 <nav class="d-none d-md-flex darkbg mx-auto py-12 br-25 white--text rounded-lg" >
