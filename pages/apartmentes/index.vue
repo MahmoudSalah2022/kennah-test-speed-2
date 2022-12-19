@@ -66,8 +66,20 @@
                 </div>
             </div>
           </div>
-          <div id="resrvetionBtn">
-
+          <div id="resrvetionBtn" class="mt-4">
+            <div class="d-flex flex-row align-center">
+                <div id="priceNight">
+                    <v-btn elevation="0" color= "scolor white--text" class="rounded-l-xl rounded-r-0 mr-0 pt-5 pb-5 pr-15 pl-15">135/Night</v-btn>
+                </div>
+                <div id="soonresrvitiondate">                    
+                    <v-btn elevation="0" outlined color= "scolor white--text" class="rounded-r-xl rounded-l-0 ml-0 pt-5 pb-5 pr-9 pl-9">
+                        <div class="d-flex flex-column align-center ">
+                            <span>nearest reservation</span>
+                            <span>15 jan - 21 Jan</span>
+                        </div>
+                    </v-btn>
+                </div>
+            </div>
           </div>
           <div id="apartGallary">
 
@@ -81,6 +93,9 @@
         cursor: pointer;
         border-bottom: solid #813316 2px;
         width: 158px;
+    }
+    #priceNight .v-btn{
+        border: solid 1px;
     }
   </style>
   <script>

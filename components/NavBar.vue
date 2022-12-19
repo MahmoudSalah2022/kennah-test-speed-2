@@ -4,12 +4,11 @@
         <v-row align="center" class="justify-center align-center">
             <v-col cols="12" sm="12" md="10" xl="8" lg="12" >
                 <nav  class="d-none d-md-flex justify-center align-center mt-3 mb-3">
-                    <v-col id="website-logo" cols="2" class="pl-0" @click = "$router.push('/')">
-                        <v-col class="d-flex flex-row justify-start pl-0" width="92" align="center">
+                    <v-col cols="2" class="pl-0" >
+                        <v-col @click = "$router.push('/')" id="website-logo" class="d-flex flex-row justify-start pl-0 pr-0"  align="center">
                             <v-img
+                            height="46" width="92" 
                             id="site-logo"
-                            height="46"
-                            width="92"
                             src="/Mask group (1).webp"
                             contain
                             position="none"
@@ -140,10 +139,12 @@ export default {
 <style>
 #website-logo{
     cursor: pointer;
+    width: 95px;
 }
 #site-logo .v-image__image{
     
     background-position: none !important;
+    cursor: pointer;
 }
 #searchbar {
     height: 44px;
