@@ -1,6 +1,6 @@
 <template>
     <v-row justify="center" align="center">
-      <v-col xl="8" lg="12" sm="12" md="12" xs="4" class="d-flex flex-row">
+      <v-col col="12" xl="8" lg="12" sm="12" md="12" class="d-flex flex-row flex-wrap  align-start pl-6 pl-md-2">
         <v-card flat>
           <div id="apartdetail">
             <div class="d-flex flex-row mt-5 align-center ">
@@ -29,8 +29,8 @@
             <div id="apartAmenitTitle">
                 <h4 color="fcolor--text"> Saoirse Amenities </h4>
             </div>
-            <div id="allAmenities" md="4">
-                <div class="d-flex flex-row mt-2 mb-2">
+            <v-col  id="allAmenities" col="12" lg="6" md="6" sm="8" xs="1">
+                <v-col  class="d-flex flex-row mt-2 mb-2 flex-wrap">
                     <div class="oneAmenitie d-flex flex-row align-center mr-2">
                         <v-icon color="black">mdi-silverware-fork-knife</v-icon> 
                         <h4 class="font-weight-light"> Kitchen </h4> 
@@ -43,8 +43,20 @@
                         <v-icon color="black">mdi-wifi</v-icon> 
                         <h4 class="font-weight-light"> Wifi </h4> 
                     </div>
-                </div>
-                <div class="d-flex flex-row mt-2 mb-2">
+                    <div class="oneAmenitie d-flex flex-row align-center mr-2">
+                        <v-icon color="black">mdi-parking</v-icon> 
+                        <h4 class="font-weight-light"> Free driveway parking </h4> 
+                    </div>
+                    <div class="oneAmenitie d-flex flex-row align-center mr-2">
+                        <v-icon color="black">mdi-television</v-icon> 
+                        <h4 class="font-weight-light"> 55" HDTV </h4> 
+                    </div>
+                    <div class="oneAmenitie d-flex flex-row align-center mr-2">
+                        <v-icon color="black">mdi-pool</v-icon> 
+                        <h4 class="font-weight-light"> Private outdoor pool </h4> 
+                    </div>
+                </v-col>
+                <!-- <div class="d-flex flex-row mt-2 mb-2">
                     <div class="oneAmenitie d-flex flex-row align-center mr-2">
                         <v-icon color="black">mdi-parking</v-icon> 
                         <h4 class="font-weight-light"> Free driveway parking </h4> 
@@ -58,8 +70,8 @@
                         <h4 class="font-weight-light"> Private outdoor pool </h4> 
                     </div>
 
-                </div>
-            </div>
+                </div> -->
+            </v-col >
             <div id="seeAllAmenities" >
                 <div class="text-caption">
                     Show All Saoirse Amenities
@@ -67,12 +79,19 @@
             </div>
           </div>
           <div id="resrvetionBtn" class="mt-4">
-            <div class="d-flex flex-row align-center">
+            <div class="d-flex flex-column flex-sm-row align-md-center">
                 <div id="priceNight">
-                    <v-btn elevation="0" color= "scolor white--text" class="rounded-l-xl rounded-r-0 mr-0 pt-5 pb-5 pr-15 pl-15">135/Night</v-btn>
+                    <v-btn elevation="0" color= "scolor white--text" class="d-none d-sm-flex rounded-l-xl rounded-r-0 mr-0 pt-5 pb-5 pr-15 pl-15">135/Night</v-btn>
+                    <v-btn elevation="0" color= "scolor white--text" class="d-flex d-sm-none rounded-xl  mr-0 pt-5 pb-5 pr-15 pl-15">135/Night</v-btn>
                 </div>
-                <div id="soonresrvitiondate">                    
-                    <v-btn elevation="0" outlined color= "scolor white--text" class="rounded-r-xl rounded-l-0 ml-0 pt-5 pb-5 pr-9 pl-9">
+                <div id="soonresrvitiondate" >                    
+                    <v-btn elevation="0" outlined color= "scolor white--text" class="d-sm-flex d-none rounded-r-xl rounded-l-0 ml-0 pt-5 pb-5 pr-9 pl-9">
+                        <div class="d-flex flex-column align-center ">
+                            <span>nearest reservation</span>
+                            <span>15 jan - 21 Jan</span>
+                        </div>
+                    </v-btn>
+                    <v-btn elevation="0" outlined color= "scolor white--text" class="d-flex d-sm-none rounded-xl  mt-3 ml-0 pt-5 pb-5 pr-9 pl-9">
                         <div class="d-flex flex-column align-center ">
                             <span>nearest reservation</span>
                             <span>15 jan - 21 Jan</span>
