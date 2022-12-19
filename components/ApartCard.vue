@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center" >
-    <v-col lg="12" sm="12" md="12" xs="4" id="apartcard" class="d-flex flex-row flex-wrap  align-start">
+    <v-col xl="8" lg="12" sm="12" md="12" xs="4" id="apartcard" class="d-flex flex-row flex-wrap  align-start">
       <v-card
       v-for="(aprt, i) in apartments" :key="i"
         id="cardapart"

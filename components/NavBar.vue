@@ -1,10 +1,10 @@
 
 <template >
     <v-container >
-        <v-row align="center">
-            <v-col cols="12" sm="12" md="10" lg="12" >
+        <v-row align="center" class="justify-center align-center">
+            <v-col cols="12" sm="12" md="10" xl="8" lg="12" >
                 <nav  class="d-none d-md-flex justify-center align-center mt-3 mb-3">
-                    <v-col cols="2" class="pl-0">
+                    <v-col id="website-logo" cols="2" class="pl-0" @click = "$router.push('/')">
                         <v-col class="d-flex flex-row justify-start pl-0" width="92" align="center">
                             <v-img
                             id="site-logo"
@@ -138,7 +138,11 @@ export default {
 </script>
 
 <style>
+#website-logo{
+    cursor: pointer;
+}
 #site-logo .v-image__image{
+    
     background-position: none !important;
 }
 #searchbar {
