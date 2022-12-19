@@ -29,8 +29,8 @@
             <div id="apartAmenitTitle">
                 <h4 color="fcolor--text"> Saoirse Amenities </h4>
             </div>
-            <v-col  id="allAmenities" col="12" lg="6" md="6" sm="8" xs="1">
-                <v-col  class="d-flex flex-row mt-2 mb-2 flex-wrap">
+            <v-col  id="allAmenities" col="12" lg="6" md="6" sm="8" xs="1" class="pl-0">
+                <v-col  class="d-flex flex-row mt-2 mb-2 flex-wrap pl-0">
                     <div class="oneAmenitie d-flex flex-row align-center mr-2">
                         <v-icon color="black">mdi-silverware-fork-knife</v-icon> 
                         <h4 class="font-weight-light"> Kitchen </h4> 
