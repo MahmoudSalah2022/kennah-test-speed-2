@@ -84,7 +84,7 @@
                 </nav>
                 <nav  class="d-md-none d-flex flex-row justify-space-between align-center mt-3 mb-3">
                     <v-col cols="4" class="pl-0">
-                        <v-col class="d-flex flex-row justify-start pl-0" width="92" align="center">
+                        <v-col @click = "$router.push('/')" class="d-flex flex-row justify-start pl-0" width="92" align="center">
                             <v-img
                             id="site-logo"
                             height="46"

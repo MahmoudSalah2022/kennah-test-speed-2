@@ -1,7 +1,7 @@
 <template>
     <v-row justify="center" align="center">
-      <v-col col="12" xl="8" lg="12" sm="12" md="12" class="d-flex flex-row flex-wrap  align-start pl-6 pl-md-2">
-        <v-card flat>
+      <v-col cols="12" xl="8" lg="12" sm="12" md="12" xs="12" class="d-flex flex-sm-row flex-column-reverse flex-wrap align-start pl-6 pl-md-2">
+        <v-col cols="12" md="5">
           <div id="apartdetail">
             <div class="d-flex flex-row mt-5 align-center ">
                 <h3 class="font-weight-black" color="fcolor--text"> Saoirse | </h3>
@@ -29,8 +29,8 @@
             <div id="apartAmenitTitle">
                 <h4 color="fcolor--text"> Saoirse Amenities </h4>
             </div>
-            <v-col  id="allAmenities" col="12" lg="6" md="6" sm="8" xs="1" class="pl-0">
-                <v-col  class="d-flex flex-row mt-2 mb-2 flex-wrap pl-0">
+            <v-col  id="allAmenities" col="12" lg="12" md="12" sm="8" xs="1" class="pl-0">
+                <v-col  class="d-flex flex-row mt-0 mb-2 flex-wrap pl-0 py-0 flex-gap-2">
                     <div class="oneAmenitie d-flex flex-row align-center mr-2">
                         <v-icon color="black">mdi-silverware-fork-knife</v-icon> 
                         <h4 class="font-weight-light"> Kitchen </h4> 
@@ -43,7 +43,7 @@
                         <v-icon color="black">mdi-wifi</v-icon> 
                         <h4 class="font-weight-light"> Wifi </h4> 
                     </div>
-                    <div class="oneAmenitie d-flex flex-row align-center mr-2">
+                    <div class="oneAmenitie d-flex flex-row align-center mr-2  mt-2">
                         <v-icon color="black">mdi-parking</v-icon> 
                         <h4 class="font-weight-light"> Free driveway parking </h4> 
                     </div>
@@ -51,7 +51,7 @@
                         <v-icon color="black">mdi-television</v-icon> 
                         <h4 class="font-weight-light"> 55" HDTV </h4> 
                     </div>
-                    <div class="oneAmenitie d-flex flex-row align-center mr-2">
+                    <div class="oneAmenitie d-flex flex-row align-center mr-2  mt-2">
                         <v-icon color="black">mdi-pool</v-icon> 
                         <h4 class="font-weight-light"> Private outdoor pool </h4> 
                     </div>
@@ -103,7 +103,10 @@
           <div id="apartGallary">
 
           </div>
-        </v-card>
+        </v-col>
+        <v-col cols="12" md="7">
+            <GallaryInsideApart/>
+        </v-col>
       </v-col>
     </v-row>
   </template>

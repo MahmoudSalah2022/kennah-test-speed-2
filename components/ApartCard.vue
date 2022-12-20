@@ -38,7 +38,7 @@
           </div>
         </v-col>
         <v-col justify="center" align="center"  >
-          <v-btn id="btnapart" large class="scolor">
+          <v-btn @click = "$router.push('/apartmentes')" id="btnapart" large class="scolor">
             <v-col  class="d-flex flex-column ">
               <v-card-text id="price" class="pb-0 pt-2 white--text subtitle-1">
                {{aprt.price}} / Night
