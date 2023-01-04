@@ -1,6 +1,10 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  server: {
+    port: 3001, // default: 3000
+    timing: false
+  },
   mode:'universal',
 
   target: 'static',
@@ -27,8 +31,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ["~/plugins/axios"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,10 +43,18 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
-
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://go.nuxtjs.dev/axios
+    "@nuxtjs/axios",
   ],
+  // Modules: https://go.nuxtjs.dev/config-modules
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: "/",
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
