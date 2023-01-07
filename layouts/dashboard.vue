@@ -7,7 +7,7 @@
       <!-- End header -->
       <!-- Start page Content -->
       <v-main>
-        <v-container class="pa-0 ml-2 mt-2">
+        <v-container class="pa-0 ml-2 mt-2" fluid>
             <Nuxt />
         </v-container>
       </v-main>

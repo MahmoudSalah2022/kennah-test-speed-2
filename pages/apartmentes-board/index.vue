@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app id="appa">
     
     <v-row class="grey lighten-4" flat>
         <sidebar/>

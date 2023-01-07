@@ -1,4 +1,4 @@
-
+import '@mdi/font/css/materialdesignicons.css'
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 
@@ -13,6 +13,9 @@ const vuetify = new Vuetify({
         anchor: '#8c9eff',
       },
     },
+  },
+  icons: {
+    iconfont: 'mdi', // default - only for display purposes
   },
 })
 

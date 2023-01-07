@@ -7,7 +7,7 @@
     <!-- End header -->
     <!-- Start page Content -->
     <v-main>
-      <v-container >
+      <v-container>
           <Nuxt />
       </v-container>
     </v-main>

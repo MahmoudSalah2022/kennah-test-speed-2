@@ -51,8 +51,9 @@
         items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard', route:'/dashboardadmin' },
           { title: 'Apartmentes', icon: 'mdi-home-city', route:'/apartmentes-board' },
+          { title: 'Amenities', icon: 'mdi-wifi', route:'/amenities'},
+          { title: 'Customer', icon: 'mdi-account-group-outline' },
           { title: 'My Account', icon: 'mdi-account' },
-          { title: 'Users', icon: 'mdi-account-group-outline' },
         ],
         mini: true,
       }
