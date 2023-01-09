@@ -34,8 +34,8 @@
                                     <tbody v-for="(apartment, i) in apartmentes" :key="i">
                                         <tr>
                                         <td>{{ apartment.Name }}</td>
-                                        <td>{{ apartment.NumberGuest }}</td>
                                         <td>{{ apartment.NumberRooms }}</td>
+                                        <td>{{ apartment.NumberGuest }}</td>
                                         <td>{{ apartment.Price }}</td>
                                         <td>                   
                                             <v-menu offset-y>
