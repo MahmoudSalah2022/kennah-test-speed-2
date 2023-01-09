@@ -8,7 +8,7 @@
     >
       <v-list-item class="px-2">
         <v-list-item-avatar>
-          <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
+          <v-img src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"></v-img>
         </v-list-item-avatar>
 
         <v-list-item-title>supervisor name</v-list-item-title>

@@ -69,7 +69,7 @@
                             >
                             <div class="d-flex flex-row justfiy-center align-center pl-4">
                                 <v-icon color="black">mdi-menu</v-icon>
-                                <v-col >
+                                <v-col @click = "$router.push('/dashboardadmin')">
                                     <v-avatar size="36px" >
                                         <img
                                             alt="Avatar"
@@ -112,8 +112,8 @@
                                 >
                                 <div class="d-flex flex-row justfiy-center align-center pl-4">
                                     <v-icon color="black">mdi-menu</v-icon>
-                                    <v-col >
-                                        <v-avatar size="36px" >
+                                    <v-col @click = "$router.push('/dashboardadmin')">
+                                        <v-avatar size="36px">
                                             <img
                                                 alt="Avatar"
                                                 src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
