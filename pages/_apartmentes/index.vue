@@ -2,6 +2,7 @@
     <v-row justify="center" align="center">
       <v-col cols="12" xl="8" lg="12" sm="12" md="12" xs="12" class="d-flex flex-sm-row flex-column-reverse flex-wrap align-start pl-6 pl-md-2">
         <v-col cols="12" md="5">
+            <pre>{{ apartment }}</pre>
           <div id="apartdetail">
             <div class="d-flex flex-row mt-5 align-center ">
                 <h3 class="font-weight-black" color="fcolor--text"> Saoirse | </h3>
@@ -105,7 +106,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="7">
-            <GallaryInsideApart/>
+            <!-- <GallaryInsideApart/> -->
         </v-col>
       </v-col>
     </v-row>
@@ -122,7 +123,32 @@
   </style>
   <script>
   export default {
-  
-  }
+    data: () => ({
+        apartmentes: [],
+    }),
+
+    methods: {              
+
+    },
+
+    async fetch(Slug) {
+            await this.$axios.$get(`"apartmentes/${Slug}"`).then((res) => {
+            console.log(res);
+            if (res?.length > 0) {
+                this.apartmentes = res;
+            }
+            });
+        },
+
+    // async asyncData({params , $axios}) {
+    //   console.log(params.apartmentes.Name);
+    //   const apartment = await $axios.$get(`apartmentes/${params.apartmentes}`)
+    //   return { apartment }
+      
+    // },
+    
+    fetchOnServer: false,
+}
+
   </script>
   

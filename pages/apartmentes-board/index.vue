@@ -243,7 +243,6 @@
                                 ></v-file-input>
                             </v-col>
                         </v-row>
-
             </v-col>
             <v-btn depressed color="primary" type="submit" :disabled="!form.valid"><span>Edit</span></v-btn>
           </v-form>
@@ -292,15 +291,6 @@
     methods: {              
 
         async editForm(id){
-        const Name = this.form.fields.Name;
-        const Compound = this.form.fields.Compound;
-        const Location = this.form.fields.Location;
-        const NumberGuest = this.form.fields.NumberGuest;
-        const NumberRooms = this.form.fields.NumberRooms;
-        const NumberBathRooms = this.form.fields.NumberBathRooms;
-        const Clean = this.form.fields.Clean;
-        const Cover = this.form.fields.Cover;
-        const Price = this.form.fields.Price;
         await this.$axios.$put(`apartmentes/${this.editApartmentId}`, this.form.fields ).then((res) => {
             if (res._id) {
                 this.apartmentes.forEach((apartment)=>{

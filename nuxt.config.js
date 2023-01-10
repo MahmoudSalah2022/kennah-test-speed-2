@@ -5,7 +5,7 @@ export default {
     port: 3001, // default: 3000
     timing: false
   },
-  mode:'universal',
+ // mode:'universal',
 
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head

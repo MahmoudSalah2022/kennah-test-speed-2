@@ -4,7 +4,7 @@
       <v-card
       v-for="(aprt, i) in apartmentes" :key="i"
         id="cardapart"
-        class="mx-auto mt-16"
+        class="mx-2 mt-16"
         max-width="280"
         width="280"  
       >
@@ -39,7 +39,8 @@
           </div>
         </v-col>
         <v-col justify="center" align="center"  >
-          <v-btn @click = "$router.push('/apartmentes')" id="btnapart" large class="scolor">
+          <NuxtLink :to="aprt.Slug" >
+          <v-btn id="btnapart" large class="scolor">
             <v-col  class="d-flex flex-column ">
               <v-card-text id="price" class="pb-0 pt-2 white--text subtitle-1">
                {{aprt.Price}}$ / Night
@@ -49,6 +50,7 @@
               </v-card-text>
             </v-col>
           </v-btn>
+        </NuxtLink >
         </v-col>
       </v-card>
     </v-col>
@@ -79,8 +81,12 @@ export default {
 
 <style>
 #apartcard{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-content: center !important;
+  align-items: center !important;
   padding: 0;
-  justify-content: flex-start;
 }
 
 #cardapart{
