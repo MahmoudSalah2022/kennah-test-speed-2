@@ -39,7 +39,7 @@
           </div>
         </v-col>
         <v-col justify="center" align="center"  >
-          <NuxtLink :to="aprt.Slug" >
+          <NuxtLink :to="`apartmentes/${aprt.slug}`" >
           <v-btn id="btnapart" large class="scolor">
             <v-col  class="d-flex flex-column ">
               <v-card-text id="price" class="pb-0 pt-2 white--text subtitle-1">
