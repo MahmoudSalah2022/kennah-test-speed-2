@@ -116,6 +116,7 @@
                                         <v-checkbox
                                         v-model="selected"
                                         :label="`${ amenitie.Name }`"
+                                        :prepend-icon="`${ amenitie.Icon }`"
                                         >{{ amenitie.Name }}</v-checkbox>
                                     </v-col>
                                 </v-col>
@@ -154,6 +155,16 @@
                                 ></v-file-input>
                             </v-col>
                         </v-row>
+                        <!-- <v-col v-for="(customer, i) in customers" :key="i" cols="6">
+                            <v-select
+                            :items="`${ customer.Travailing }`"
+                            menu-props="auto"
+                            label="Select"
+                            hide-details
+                            prepend-icon="mdi-map"
+                            single-line
+                            ></v-select>
+                        </v-col> -->
                         <v-col col="4" class="ma-0 pa-0">
                             <v-btn depressed color="scolor white--text" type="submit" ><span>Add Apartment</span></v-btn>
                         </v-col>
@@ -171,6 +182,9 @@
     data: () => ({
     apartmentes: [],
     amenities: [],
+    customers:[{
+        Travailing:[],
+    }],
     dialog: false,
     editDialog: false,
     editCategoryId: null,
@@ -226,11 +240,19 @@
 
     },
 
+
     async fetch() {
           await this.$axios.$get("amenities").then((res) => {
           console.log(res);
           if (res?.length > 0) {
               this.amenities = res;
+          }
+          });
+
+          await this.$axios.$get("customers").then((res) => {
+          console.log(res);
+          if (res?.length > 0) {
+              this.customers = res;
           }
           });
       },

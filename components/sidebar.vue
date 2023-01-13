@@ -52,7 +52,7 @@
           { title: 'Dashboard', icon: 'mdi-view-dashboard', route:'/dashboardadmin' },
           { title: 'Apartmentes', icon: 'mdi-home-city', route:'/apartmentes-board' },
           { title: 'Amenities', icon: 'mdi-wifi', route:'/amenities'},
-          { title: 'Customer', icon: 'mdi-account-group-outline' },
+          { title: 'Customer', icon: 'mdi-account-group-outline', route:'/customers-board' },
           { title: 'My Account', icon: 'mdi-account' },
         ],
         mini: true,
