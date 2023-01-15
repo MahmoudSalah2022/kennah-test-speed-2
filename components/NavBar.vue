@@ -61,24 +61,114 @@
                             class ="rounded-xl mr-5" color="scolor white--text "
                             large
                             > Make Money</v-btn>
-                            <v-btn
-                            id="user-menu"
-                            class ="rounded-xl "
-                            color="white scolor--text" 
-                            large
-                            >
-                            <div class="d-flex flex-row justfiy-center align-center pl-4">
-                                <v-icon color="black">mdi-menu</v-icon>
-                                <v-col @click = "$router.push('/dashboardadmin')">
-                                    <v-avatar size="36px" >
-                                        <img
-                                            alt="Avatar"
-                                            src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                                        >
-                                    </v-avatar>
-                                </v-col>
-                            </div>
-                            </v-btn>
+                            <v-menu bottom offset-y class="sub-menu">
+                                <template v-slot:activator="{ on, attrs }">   
+                                <v-btn
+                                id="user-menu"
+                                class ="rounded-xl "
+                                color="white scolor--text" 
+                                large
+                                v-bind="attrs"
+                                v-on="on"
+                                >
+                                    <div class="d-flex flex-row justfiy-center align-center pl-4">
+                                        <v-icon color="black">mdi-menu</v-icon>
+                                        <v-col>
+                                            <v-avatar size="36px" >
+                                                <img
+                                                    alt="Avatar"
+                                                    src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                                                >
+                                            </v-avatar>
+                                        </v-col>
+                                    </div>
+                                </v-btn>
+                                </template>
+                                <v-list>
+                                    <v-list-item>
+                                    <v-list-item-title @click="registerdialog = true" v-bind="attrs" v-on="on">                                   
+                                        <v-dialog v-model="registerdialog" persistent max-width="600px">
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <v-col color="green lighten-5 black--text" dark v-bind="attrs" v-on="on">
+                                                    <v-icon>mdi-account-plus</v-icon>
+                                                    Sign Up
+                                                </v-col>
+                                            </template>
+                                            <v-card >
+                                                <v-card-title>
+                                                    <span class="text-h5">Register</span>
+                                                </v-card-title>
+                                                <v-card-text>
+                                                    <v-container>
+                                                        <v-row col="12" md="10" max-width="600px" class="d-block">
+                                                            <v-stepper v-model="e6" vertical>
+                                                                <v-stepper-step :complete="e6 > 1" step="1">
+                                                                    Your Email
+                                                                </v-stepper-step>
+                                    
+                                                                <v-stepper-content step="1">
+                                                                    <v-row class="d-flex flex-row ma-0" >
+                                                                        <v-col id="ApartName" class="d-flex flex-column mt-5 mr-3 pa-0">
+                                                                            <v-text-field
+                                                                            v-model="form.fields.Name" :rules="form.rules.Name"
+                                                                            class="mt-3"
+                                                                            label="Insert Your Email"
+                                                                            placeholder="pleas Insert Your Email"
+                                                                            outlined
+                                                                            ></v-text-field>
+                                                                        </v-col>
+                                                                    </v-row>
+                                                                    <v-btn color="primary" @click="e6 = 2">
+                                                                        Continue
+                                                                    </v-btn>
+                                                                    <v-btn text>
+                                                                        Cancel
+                                                                    </v-btn>
+                                                                </v-stepper-content>
+                                    
+                                                                <v-stepper-step :complete="e6 > 2" step="2">
+                                                                    Your Password
+                                                                </v-stepper-step>
+                                    
+                                                                <v-stepper-content step="2">
+                                                                    <v-row class="d-flex flex-row ma-0" >
+                                                                        <v-col id="ApartName" class="d-flex flex-column mt-5 mr-3 pa-0">
+                                                                            <v-text-field
+                                                                            v-model="form.fields.Name" :rules="form.rules.Name"
+                                                                            class="mt-3"
+                                                                            label="Insert Your Password"
+                                                                            placeholder="pleas Insert Your Password"
+                                                                            outlined
+                                                                            ></v-text-field>
+                                                                        </v-col>
+                                                                    </v-row>
+                                                                    <v-btn color="primary" @click="e6 = 3">
+                                                                        Register
+                                                                    </v-btn>
+                                                                    <v-btn text @click="registerdialog = false">
+                                                                        Cancel
+                                                                    </v-btn>
+                                                                </v-stepper-content>
+                                                            </v-stepper>
+                                                        </v-row>
+                                                    </v-container>
+                                                    <small>*indicates required field</small>
+                                                </v-card-text>
+                                                <v-card-actions>
+                                                    <v-spacer></v-spacer>
+                                                    <v-btn color="blue darken-1" text @click="registerdialog = false">
+                                                        Close
+                                                    </v-btn>
+                                                    <v-btn color="blue darken-1" text @click="registerdialog = false">
+                                                        Save
+                                                    </v-btn>
+                                                </v-card-actions>
+                                            </v-card>
+                                        </v-dialog>
+                                    </v-list-item-title>
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
                         </div>
                     </v-col>
                 </nav>
@@ -103,26 +193,40 @@
                                 </div>
                             </div>
                         </v-col>
-                        <v-col cols="5" class="d-flex flex-row justfiy-start pr-0">
-                            <v-btn
-                                id="user-menu"
-                                class ="rounded-xl "
-                                color="white scolor--text" 
-                                large
-                                >
-                                <div class="d-flex flex-row justfiy-center align-center pl-4">
-                                    <v-icon color="black">mdi-menu</v-icon>
-                                    <v-col @click = "$router.push('/dashboardadmin')">
-                                        <v-avatar size="36px">
-                                            <img
-                                                alt="Avatar"
-                                                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                                            >
-                                        </v-avatar>
-                                    </v-col>
-                                </div>
+                        <v-menu
+                        transition="slide-y-transition"
+                        bottom
+                        >
+                        <template v-slot:activator="{ on, attrs }">                     
+                            <v-col cols="5" class="d-flex flex-row justfiy-start pr-0">
+                                <v-btn
+                                    id="user-menu"
+                                    class ="rounded-xl "
+                                    color="white scolor--text" 
+                                    large
+                                    v-bind="attrs"
+                                    v-on="on"
+                                    >
+                                    <div class="d-flex flex-row justfiy-center align-center pl-4">
+                                        <v-icon color="black">mdi-menu</v-icon>
+                                        <v-col @click = "$router.push('/dashboardadmin')">
+                                            <v-avatar size="36px">
+                                                <img
+                                                    alt="Avatar"
+                                                    src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                                                >
+                                            </v-avatar>
+                                        </v-col>
+                                    </div>
                                 </v-btn>
-                        </v-col>
+                            </v-col>
+                        </template>  
+                        <v-list>
+                            <v-list-item>
+                            <v-list-item-title></v-list-item-title>
+                            </v-list-item>
+                        </v-list>                
+                    </v-menu>
                     </v-col>
 
                 </nav>
@@ -132,7 +236,22 @@
 </template>
 <script>
 export default {
+    data: () => ({
+    e6: 1,
+    customers: [],
+    editCustomerId: null,
+    form: {
+      valid: false,
+      fields: { 
 
+                },
+      error:[],
+      rules: {
+
+      },
+    },
+    registerdialog:false,
+    }),
 }
 </script>
 
@@ -159,5 +278,15 @@ export default {
 #user-menu{
   min-width: 80px !important; 
   width: 90px !important;
+}
+/* .sub-menu{
+    margin-left: -49px !important;
+    margin-top: 20px !important;
+} */
+
+.v-menu__content {
+
+    margin-left: -49px !important;
+    margin-top: 10px !important;
 }
 </style>
