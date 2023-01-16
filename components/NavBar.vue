@@ -61,7 +61,7 @@
                             class ="rounded-xl mr-5" color="scolor white--text "
                             large
                             > Make Money</v-btn>
-                            <v-menu bottom offset-y class="sub-menu">
+                            <v-menu bottom offset-y class="sub-menu" >
                                 <template v-slot:activator="{ on, attrs }">   
                                 <v-btn
                                 id="user-menu"
@@ -84,14 +84,14 @@
                                     </div>
                                 </v-btn>
                                 </template>
-                                <v-list>
-                                    <v-list-item>
-                                    <v-list-item-title @click="registerdialog = true" v-bind="attrs" v-on="on">                                   
+                                <v-list width="160">
+                                    <v-list-item class="d-flex flex-column align-center mt-auto mb-auto" >
+                                    <v-list-item-title @click="registerdialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" width="126" v-bind="attrs" v-on="on">                                   
                                         <v-dialog v-model="registerdialog" persistent max-width="600px">
                                             <template v-slot:activator="{ on, attrs }">
-                                                <v-col color="green lighten-5 black--text" dark v-bind="attrs" v-on="on">
-                                                    <v-icon>mdi-account-plus</v-icon>
-                                                    Sign Up
+                                                <v-col color="green lighten-5 black--text" class="px-0 d-flex flex-row justify-start" dark v-bind="attrs" v-on="on">
+                                                    <v-icon >mdi-account-plus</v-icon>
+                                                    <div>Sign Up</div>
                                                 </v-col>
                                             </template>
                                             <v-card >
@@ -121,7 +121,7 @@
                                                                     <v-btn color="primary" @click="e6 = 2">
                                                                         Continue
                                                                     </v-btn>
-                                                                    <v-btn text>
+                                                                    <v-btn text @click="registerdialog = false">
                                                                         Cancel
                                                                     </v-btn>
                                                                 </v-stepper-content>
@@ -160,6 +160,61 @@
                                                         Close
                                                     </v-btn>
                                                     <v-btn color="blue darken-1" text @click="registerdialog = false">
+                                                        Save
+                                                    </v-btn>
+                                                </v-card-actions>
+                                            </v-card>
+                                        </v-dialog>
+                                    </v-list-item-title>
+                                    <v-list-item-title @click="logindialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" v-bind="attrs" v-on="on">                                   
+                                        <v-dialog v-model="logindialog" persistent max-width="600px">
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <v-col color="green lighten-5 black--text" class="px-0 d-flex flex-row justify-start"  dark v-bind="attrs" v-on="on">
+                                                    <v-icon class="pr-1">mdi-login</v-icon>
+                                                    <div class="pl-0">Sign In</div>
+                                                </v-col>
+                                            </template>
+                                            <v-card >
+                                                <v-card-title>
+                                                    <span class="text-h5">Sign In</span>
+                                                </v-card-title>
+                                                <v-card-text>
+                                                    <v-container>
+                                                        <v-row col="12" md="10" max-width="600px" class="d-block">
+                                                                    <v-row class="d-flex flex-row ma-0" >
+                                                                        <v-col id="ApartName" class="d-flex flex-column mt-5 mr-3 pa-0">
+                                                                            <h4>Your Email</h4> 
+                                                                            <v-text-field
+                                                                            v-model="form.fields.Name" :rules="form.rules.Name"
+                                                                            class="mt-3"
+                                                                            label="Insert Your Email"
+                                                                            placeholder="pleas Insert Your Email"
+                                                                            outlined
+                                                                            ></v-text-field>
+                                                                        </v-col>
+                                                                    </v-row>
+                                                                    <v-row class="d-flex flex-row ma-0" >
+                                                                        <v-col id="ApartName" class="d-flex flex-column mt-5 mr-3 pa-0">
+                                                                            <h4>Your Password</h4> 
+                                                                            <v-text-field
+                                                                            v-model="form.fields.Name" :rules="form.rules.Name"
+                                                                            class="mt-3"
+                                                                            label="Insert Your Password"
+                                                                            placeholder="pleas Insert Your Password"
+                                                                            outlined
+                                                                            ></v-text-field>
+                                                                        </v-col>
+                                                                    </v-row>
+                                                        </v-row>
+                                                    </v-container>
+                                                    <small>*indicates required field</small>
+                                                </v-card-text>
+                                                <v-card-actions>
+                                                    <v-spacer></v-spacer>
+                                                    <v-btn color="blue darken-1" text @click="logindialog = false">
+                                                        Close
+                                                    </v-btn>
+                                                    <v-btn color="blue darken-1" text @click="logindialog = false">
                                                         Save
                                                     </v-btn>
                                                 </v-card-actions>
@@ -228,7 +283,6 @@
                         </v-list>                
                     </v-menu>
                     </v-col>
-
                 </nav>
             </v-col>
         </v-row>
@@ -251,6 +305,7 @@ export default {
       },
     },
     registerdialog:false,
+    logindialog: false,
     }),
 }
 </script>
@@ -286,7 +341,10 @@ export default {
 
 .v-menu__content {
 
-    margin-left: -49px !important;
+    margin-left: -65px !important;
     margin-top: 10px !important;
+}
+.itmelistwidth{
+    width: 126px;
 }
 </style>

@@ -3,6 +3,7 @@
     <v-col>
       <v-card flat>
         <ApartCard/>
+        <InfoSection/>
       </v-card>
     </v-col>
   </v-row>

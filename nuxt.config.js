@@ -72,6 +72,8 @@ export default {
           tcolor: "#AC441E",
           darkbg: "#222222",
           graybg:"#787878",
+          fillstar:"#27AD53",
+          strokstar:"#27AD53",
         },
         dark: {
           primary: colors.blue.lighten3,
