@@ -17,9 +17,61 @@
                     </v-col>
                     <v-col cols="6">
                         <div id="searchbar" class="d-lg-flex d-md-none white elevation-4 rounded-xl" justify="center" align="center">
-                            <div>Check in <strong>15 Jan</strong> </div>
+                                 <v-col
+                                    cols="12"
+                                    sm="6"
+                                    md="4"
+                                    class="mt-3"
+                                    >
+                                    <v-menu
+                                        ref="menu"
+                                        v-model="menu"
+                                        :close-on-content-click="false"
+                                        :return-value.sync="date"
+                                        transition="scale-transition"
+                                        offset-y
+                                        min-width="auto"
+                                    >
+                                        <template v-slot:activator="{ on, attrs }">
+                                        <v-text-field
+                                            v-model="date"
+                                            label=""
+                                            readonly
+                                            v-bind="attrs"
+                                            v-on="on"
+                                            :value="date"
+                                        >{{ date }}</v-text-field>
+                                        </template>
+                                        <v-date-picker
+                                        v-model="date"
+                                        no-title
+                                        scrollable
+                                        range
+                                        :min="pickerdate"
+                                        >
+                                        <v-spacer></v-spacer>
+                                        <v-btn
+                                            text
+                                            color="primary"
+                                            @click="menu = false"
+                                        >
+                                            Cancel
+                                        </v-btn>
+                                        <v-btn
+                                            text
+                                            color="primary"
+                                            @click="$refs.menu.save(date)"
+                                        >
+                                            OK
+                                        </v-btn>
+                                        </v-date-picker>
+                                    </v-menu>
+                                </v-col>
                             <div>|</div>
-                            <div>Check in <strong> 21 Jan</strong></div>
+                            <div>
+                                {{pickerdate}}
+                                {{mindate}}
+                            </div>
                             <div>|</div>
                             <div>Guest - 1 +</div>
                             <div>
@@ -291,6 +343,12 @@
 <script>
 export default {
     data: () => ({
+    date: null ,
+    mindate: new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-CA', {timeZone: 'EET'}),
+    mindate2: new Date(),
+    modal: false,
+    menu: false,
+    menu2: false,
     e6: 1,
     customers: [],
     editCustomerId: null,
@@ -307,6 +365,23 @@ export default {
     registerdialog:false,
     logindialog: false,
     }),
+computed:{
+
+    pickerdate(){
+        const hour = this.mindate2.getHours();
+
+        if(18 < hour){
+            this.mindate = new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-CA', {timeZone: 'EET'});
+        }else if(18 >= hour){
+            this.mindate = new Date(new Date().setDate(new Date().getDate()+ 2)).toLocaleDateString('en-CA', {timeZone: 'EET'});
+        }
+        console.log(this.mindate)
+        console.log(hour)
+        return this.mindate;
+    }
+},
+    methods:{
+    },
 }
 </script>
 

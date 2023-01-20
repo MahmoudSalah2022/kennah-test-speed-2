@@ -3,6 +3,7 @@
     <!-- Start header -->
     <v-app-bar color="white" :clipped-left="clipped" flat class=" mt-3 mb-3">
      <NavBar/>
+
     </v-app-bar>
     <!-- End header -->
     <!-- Start page Content -->
@@ -27,6 +28,7 @@
 </style>
 
 <script>
+
 
 
 export default {
@@ -54,5 +56,6 @@ export default {
             title: "Vuetify.js"
         };
     },
+
 }
 </script>
