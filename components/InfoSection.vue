@@ -97,7 +97,7 @@
                     <v-col cols="12 " class="mt-0 pt-0">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
                             <v-rating background-color="strokstar lighten-3" color="fillstar" half-increments hover
-                                length="5" size="26" value="4.5" readonly></v-rating>
+                                length="5" size="26" value= "4.5" readonly></v-rating>
                         </div>
                     </v-col>
                 </div>
@@ -120,7 +120,7 @@
                     <v-col cols="12 " class="mt-0 pt-0">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
                             <v-rating background-color="strokstar lighten-3" color="fillstar" half-increments hover
-                                length="5" size="26" value="4.5" readonly></v-rating>
+                                length="5" size="26" value= "4.5" readonly></v-rating>
                         </div>
                     </v-col>
                 </div>
@@ -143,7 +143,7 @@
                     <v-col cols="12 " class="mt-0 pt-0">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
                             <v-rating background-color="strokstar lighten-3" color="fillstar" half-increments hover
-                                length="5" size="26" value="4.5" readonly></v-rating>
+                                length="5" size="26" value= "4.5" readonly></v-rating>
                         </div>
                     </v-col>
                 </div>
@@ -244,7 +244,7 @@
                     <v-col cols="12 " class="mt-0 pt-0">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
                             <v-rating background-color="strokstar lighten-3" color="fillstar" half-increments hover
-                                length="5" size="26" value="4.5" readonly></v-rating>
+                                length="5" size="26" value= "4.5" readonly></v-rating>
                         </div>
                     </v-col>
                 </div>
@@ -267,7 +267,7 @@
                     <v-col cols="12 " class="mt-0 pt-0">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
                             <v-rating background-color="strokstar lighten-3" color="fillstar" half-increments hover
-                                length="5" size="26" value="4.5" readonly></v-rating>
+                                length="5" size="26" value= "4.5" readonly></v-rating>
                         </div>
                     </v-col>
                 </div>
@@ -290,7 +290,7 @@
                     <v-col cols="12 " class="mt-0 pt-0">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
                             <v-rating background-color="strokstar lighten-3" color="fillstar" half-increments hover
-                                length="5" size="26" value="4.5" readonly></v-rating>
+                                length="5" size="26" value= "4.5" readonly></v-rating>
                         </div>
                     </v-col>
                 </div>

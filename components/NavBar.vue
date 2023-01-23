@@ -32,7 +32,8 @@
                                         offset-y
                                         min-width="auto"
                                     >
-                                        <template v-slot:activator="{ on, attrs }">
+                                        <template v-slot:activator="{ on, attrs }" >
+                                        <div class="d-flex flex-row">Check In
                                         <v-text-field
                                             v-model="date"
                                             label=""
@@ -40,7 +41,11 @@
                                             v-bind="attrs"
                                             v-on="on"
                                             :value="date"
-                                        >{{ date }}</v-text-field>
+                                            solo 
+                                            flat
+                                            class="checkdate"
+                                        ></v-text-field>
+                                        </div>
                                         </template>
                                         <v-date-picker
                                         v-model="date"
@@ -370,10 +375,10 @@ computed:{
     pickerdate(){
         const hour = this.mindate2.getHours();
 
-        if(18 < hour){
+        if(hour < 18){
             this.mindate = new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-CA', {timeZone: 'EET'});
-        }else if(18 >= hour){
-            this.mindate = new Date(new Date().setDate(new Date().getDate()+ 2)).toLocaleDateString('en-CA', {timeZone: 'EET'});
+        }else if(hour >= 18){
+            this.mindate = new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-CA', {timeZone: 'EET'});
         }
         console.log(this.mindate)
         console.log(hour)
@@ -421,5 +426,10 @@ computed:{
 }
 .itmelistwidth{
     width: 126px;
+}
+.v-input__slot{
+    margin: 0px;
+    padding: 0px;
+    min-height: auto;
 }
 </style>
