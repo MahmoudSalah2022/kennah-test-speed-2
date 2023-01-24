@@ -14,7 +14,7 @@
     </v-main>
     <!-- end page Content -->
     <!-- Start Footer -->
-    <v-footer color="white" class="logo d-flex justify-center flex-column"
+    <v-footer color="white" class="logo d-flex justify-center flex-column pa-0"
     >
       <FooterSec/>
       <span>Copyright &copy; {{ new Date().getFullYear() }} Kennah</span>

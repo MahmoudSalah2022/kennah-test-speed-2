@@ -22,7 +22,7 @@
                     </v-col>
                     <v-col cols="2" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/about-us')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
@@ -46,7 +46,7 @@
                     </v-col>
                     <v-col cols="2" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/about-us')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
@@ -70,7 +70,7 @@
                     </v-col>
                     <v-col cols="2" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/about-us')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
@@ -169,7 +169,7 @@
                     </v-col>
                     <v-col cols="3" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/on-demand')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
@@ -193,7 +193,7 @@
                     </v-col>
                     <v-col cols="3" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/on-demand')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
@@ -217,7 +217,7 @@
                     </v-col>
                     <v-col cols="3" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/on-demand')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
@@ -316,7 +316,7 @@
                     </v-col>
                     <v-col cols="3" xs="4" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/on-demand')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
@@ -340,7 +340,7 @@
                     </v-col>
                     <v-col cols="3" class=" mt-2 ">
                         <div class="d-flex flex-column " justify="center" align="flex-start">
-                            <v-btn> Know More</v-btn>
+                            <v-btn @click = "$router.push('/on-demand')"> Know More</v-btn>
                         </div>
                     </v-col>
                 </div>
