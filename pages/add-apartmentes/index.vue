@@ -1,6 +1,5 @@
 <template>
     <v-app>
-    
     <v-row class="grey lighten-4" flat>
         <sidebar/>
         <v-col id="dasharea" class="d-flex flex-column ma-2">
@@ -8,6 +7,16 @@
                 <v-divider></v-divider>
                 <v-form ref="form" v-model="form.valid" v-on:submit.prevent="submitForm">
                     <v-col id="add-section" class="ma-0 pa-0 d-flex flex-column" cols="12" sm="8">
+                        <v-col id="ApartName" class="d-flex flex-column mt-5 mr-3 pa-0">
+                            <h4>Apartment Slug</h4> 
+                            <v-text-field
+                            v-model="form.fields.slug" :rules="form.rules.slig"
+                            class="mt-3"
+                            label="Apartment Slug"
+                            placeholder="pleas insert apartment slug"
+                            outlined
+                            ></v-text-field>
+                        </v-col>
                         <v-row class="d-flex flex-row ma-0" >
                         <v-col id="ApartName" class="d-flex flex-column mt-5 mr-3 pa-0">
                             <h4>Apartment Name</h4> 
@@ -192,6 +201,7 @@
       valid: false,
       fields: { 
             Name: "" , 
+            slug:"",
             Compound: "" , 
             Location: "" , 
             NumberGuest: "" , 
@@ -204,6 +214,7 @@
       error:[],
       rules: {
         Name: [(v) => !!v || ' This field is required'],
+        slug: [(v) => !!v || ' This field is required'],
         Compound: [(v) => !!v || ' This field is required'],
         Location: [(v) => !!v || ' This field is required'],
         NumberGuest: [(v) => !!v || ' This field is required'],
@@ -227,8 +238,9 @@
       const Clean = this.form.fields.Clean;
       const Cover = this.form.fields.Cover;
       const Price = this.form.fields.Price;
-      await this.$axios.$post("apartmentes", { Name, Compound, Location, NumberGuest, NumberRooms, NumberBathRooms, Clean, Cover, Price }).then((res) => {
-        if (res._id) {
+      const slug = this.form.fields.slug;
+      await this.$axios.$post("apartmentes", { Name, Compound, Location, NumberGuest, NumberRooms, NumberBathRooms, Clean, Cover, Price, slug }).then((res) => {
+        if (res._id) { 
           this.apartmentes.push(res);
           this.dialog = false;
           this.$refs.form.reset();

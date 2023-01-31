@@ -1,6 +1,6 @@
 <template >
     <v-container color=" black" class="px-md-0 ">
-        <v-row id="aboutus" justify="center" align="center" cols="12">
+        <v-row id="aboutus" justify="center" align="center" cols="12" class="mt-10">
             <v-col sm="12" md="12" xl="12" lg="12" class="px-0">
                 <div class="d-flex flex-column  darkbg mx-auto py-12 br-25 white--text rounded-lg">
                     <v-col cols="12" class="mb-0 pb-0">

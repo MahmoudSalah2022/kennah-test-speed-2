@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col xl="8" lg="12" sm="12" md="12" xs="4" id="apartcard" class="d-flex flex-row flex-wrap align-start">
+    <v-col xl="8" lg="12" sm="12" md="12" xs="12" id="apartcard" class="">
       <v-card
       v-for="(aprt, i) in apartmentes" :key="i"
         id="cardapart"
@@ -80,12 +80,25 @@ export default {
 </script>
 
 <style>
+@media screen and (max-width: 599px) {
+  #apartcard{
+  flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  #apartcard{
+    justify-content: center !important;
+  }
+}
+
 #apartcard{
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: flex-start !important;
-  align-content: center !important;
-  align-items: center !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0;
 }
 

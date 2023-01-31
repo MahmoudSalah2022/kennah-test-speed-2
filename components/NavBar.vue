@@ -114,6 +114,7 @@
                         </div>
                             </v-col>
                             <v-btn
+                            @click = "$router.push('/make_money')"
                             depressed
                             class ="rounded-xl mr-5" color="scolor white--text "
                             large
