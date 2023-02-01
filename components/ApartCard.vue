@@ -33,10 +33,10 @@
               <v-icon color="darkbg " class="pr-1">mdi-bathtub</v-icon>
               <h5 class="text-subtitle-2">{{aprt.NumberBathRooms}} Baths</h5>
           </div>
-          <div class="d-flex flex-row align-flex-end">
+          <!-- <div class="d-flex flex-row align-flex-end">
               <v-icon color="darkbg " class="pr-1">mdi-heart</v-icon>
               <h5 class="text-subtitle-2">{{aprt.loveser}}</h5>
-          </div>
+          </div> -->
         </v-col>
         <v-col justify="center" align="center"  >
           <NuxtLink :to="`apartmentes/${aprt.slug}`" >

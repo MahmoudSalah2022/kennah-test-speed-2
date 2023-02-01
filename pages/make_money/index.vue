@@ -3,19 +3,23 @@
         <v-row>
             <v-col class="d-flex flex-md-row flex-column ma-0 pa-0" cols="12">
                 <v-col class="fcolor ma-0 pa-0 rounded-lg" md="6">
-                    <v-img cover height="530px" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                    <v-img cover height="530px" src="https://kennahstays.com/wp-content/uploads/2022/09/cover-header-for-anypage.webp"
                         class="rounded-lg align-center px-md-4 text-center">
                     </v-img>
                 </v-col>
                 <v-col md="6">
                     <div class="text-h4">Make Money With kennahstays</div>
-                    <div class="graybg--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque impedit
-                        earum, nam animi nulla
-                        architecto nobis dicta voluptate autem sunt recusandae fuga. Vero quisquam omnis repellat
-                        dignissimos, rem quis dicta?
+                    <div class="graybg--text py-3">
+                        We provide real estate property and residential units owners with hassle-free property management and maintenance,
+                        turning their properties into income-generating assets.
+                        
+                        Based on revenue share, bringing their properties under the Kennah brand umbrella is a win-win, zero-risk solution for
+                        busy property owners, with comprehensive quarterly reports and transfer of collected earnings, all taken care of by us.
+                        
+                        Become one of our property owners now.
                     </div>
                     <div>
-                            <v-col cols="auto">
+                            <v-col cols="auto px-0">
 
                                 <v-dialog v-model="dialog" persistent max-width="600px">
                                     <template v-slot:activator="{ on, attrs }" class="px-0">

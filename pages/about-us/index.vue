@@ -17,7 +17,7 @@
         </v-row>
         <v-row class="ServicesRow flex-md-nowrap mr-md-2" cols="12">
             <v-col class="fcolor white--text rounded-lg pa-0 ma-0" md="6">
-                <v-img cover src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                <v-img cover height="330" src="https://kennahstays.com/wp-content/uploads/2022/09/cover-header-for-anypage.webp"
                     class="rounded-b-0 rounded-t-lg"></v-img>
                 <div class="pa-4">
                     <p class="text-h3">Why We’re Here</p>
@@ -32,7 +32,7 @@
                 </div>
             </v-col>
             <v-col class="scolor white--text rounded-lg pa-0 ma-0" md="6">
-                    <v-img cover src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                    <v-img cover height="330" src="https://kennahstays.com/wp-content/uploads/2022/03/IMG_3686-scaled-1536x1072.jpg.webp"
                         class="rounded-b-0 rounded-t-lg"></v-img>
                     <div class="pa-4">
                         <p class="text-h3">At Our Core</p>
@@ -68,7 +68,7 @@
                 </div>
             </v-col>
             <v-col class="fcolor rounded-lg pa-0 ma-0" md="6">
-                <v-img cover height= "100%" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                <v-img cover height= "100%" src="https://kennahstays.com/wp-content/uploads/2022/03/IMG_3696-scaled-1536x915.jpg.webp"
                     class="rounded-lg"></v-img>
             </v-col>
         </v-row>

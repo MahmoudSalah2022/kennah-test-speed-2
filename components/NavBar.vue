@@ -17,11 +17,10 @@
                     </v-col>
                     <v-col cols="6">
                         <div id="searchbar" class="d-lg-flex d-md-none white elevation-4 rounded-xl" justify="center" align="center">
-                                 <v-col
-                                    cols="12"
-                                    sm="6"
-                                    md="4"
-                                    class="mt-3"
+                            <v-col
+                            cols="12"
+                            md="8"        
+                            class="mt-3 pa-0 pl-3 pt-2"
                                     >
                                     <v-menu
                                         ref="menu"
@@ -33,10 +32,10 @@
                                         min-width="auto"
                                     >
                                         <template v-slot:activator="{ on, attrs }" >
-                                        <div class="d-flex flex-row">Check In
+                                        <div class="d-flex flex-row">
                                         <v-text-field
                                             v-model="date"
-                                            label=""
+                                            label="Choose Check-in and Your Check-out Day"
                                             readonly
                                             v-bind="attrs"
                                             v-on="on"
@@ -72,12 +71,12 @@
                                         </v-date-picker>
                                     </v-menu>
                                 </v-col>
-                            <div>|</div>
+                                <div>|</div>
+                                <!-- 
                             <div>
-                                {{pickerdate}}
-                                {{mindate}}
+                                Check-out
                             </div>
-                            <div>|</div>
+                            <div>|</div> -->
                             <div>Guest - 1 +</div>
                             <div>
                             <v-icon color="black">mdi-magnify</v-icon>
@@ -542,6 +541,7 @@ computed:{
     justify-content: space-evenly;
     align-items: center;
 }
+
 #flacur .v-btn {
   min-width: 42px !important; 
   width: 42px !important;

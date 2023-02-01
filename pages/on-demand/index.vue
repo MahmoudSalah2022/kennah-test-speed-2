@@ -17,7 +17,7 @@
         </v-row>
         <v-row class="ServicesRow flex-md-nowrap mr-md-1" cols="12">
             <v-col class="fcolor white--text rounded-lg pa-0 ma-0" md="6">
-                <v-img cover src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                <v-img cover height="330" src="https://kennahstays.com/wp-content/uploads/2022/03/20220214_161017-scaled-1536x866.jpg.webp"
                     class="rounded-b-0 rounded-t-lg"></v-img>
                 <div class="pa-4">
                     <p class="text-h3">Housekeeping</p>
@@ -30,7 +30,7 @@
                 </div>
             </v-col>
             <v-col class="scolor white--text rounded-lg pa-0 ma-0" md="6">
-                <v-img cover src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                <v-img cover height="330" src="https://kennahstays.com/wp-content/uploads/2022/07/image-1536x1020.jpg.webp"
                     class="rounded-b-0 rounded-t-lg"></v-img>
                 <div class="pa-4">
                     <p class="text-h3">Laundry</p>
@@ -45,7 +45,7 @@
         </v-row>
         <v-row class="ServicesRow flex-md-nowrap mr-md-1" cols="12">
             <v-col class="scolor white--text rounded-lg pa-0 ma-0" md="6">
-                <v-img cover src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                <v-img cover height="330" src="https://kennahstays.com/wp-content/uploads/2022/07/10-excellent-gyms-in-cairo.jpg"
                     class="rounded-b-0 rounded-t-lg"></v-img>
                 <div class="pa-4">
                     <p class="text-h3">Wellness Fitness</p>
@@ -57,7 +57,7 @@
                 </div>
             </v-col>
             <v-col class="fcolor white--text rounded-lg pa-0 ma-0" md="6">
-                <v-img contacoverin src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                <v-img cover height="330" src="https://kennahstays.com/wp-content/uploads/2022/07/top-view-table-full-food_23-2149209225-1536x1024.jpg.webp"
                     class="rounded-b-0 rounded-t-lg"></v-img>
                 <div class="pa-4">
                     <p class="text-h3">Food and beverage</p>
