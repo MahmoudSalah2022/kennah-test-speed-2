@@ -510,12 +510,13 @@ computed:{
 
     pickerdate(){
         const hour = this.mindate2.getHours();
-
         if(hour < 18){
             this.mindate = new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-CA', {timeZone: 'EET'});
         }else if(hour >= 18){
             this.mindate = new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-CA', {timeZone: 'EET'});
         }
+        const time = this.$moment(this.mindate2).isBetween('2023-01-01', '2023-10-30', undefined, '()');
+        console.log(time)
         console.log(this.mindate)
         console.log(hour)
         return this.mindate;

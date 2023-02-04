@@ -56,7 +56,7 @@
     </v-col>
   </v-row>
 
-  </template>
+</template>
 <script>
 export default {
   data: () => ({
