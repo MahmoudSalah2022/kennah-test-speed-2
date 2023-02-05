@@ -3,7 +3,14 @@
         "appa",
         "axios",
         "darkbg",
+        "graybg",
+        "iconfont",
+        "materialdesignicons",
+        "nuxt",
+        "nuxtjs",
         "registerdialog",
-        "signindialog"
+        "signindialog",
+        "tcolor",
+        "vuetify"
     ]
 }

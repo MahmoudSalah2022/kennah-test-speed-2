@@ -40,7 +40,7 @@
                     </v-col>
                     <v-col cols="12 " class="mt-0 pt-0">                        
                             <v-rating background-color="strokstar lighten-3" color="fillstar" half-increments hover
-                                length="5" size="26" value= "4.5" readonly></v-rating> 
+                                length="5" size="26" :value= "4.5" readonly></v-rating> 
                     </v-col>
                 </div>
             </v-col>

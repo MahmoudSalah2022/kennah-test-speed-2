@@ -46,6 +46,7 @@
                                         ></v-text-field>
                                         </div>
                                         </template>
+                                        
                                         <v-date-picker
                                         v-model="date"
                                         no-title
@@ -53,6 +54,7 @@
                                         range
                                         :min="pickerdate"
                                         >
+                                        
                                         <v-spacer></v-spacer>
                                         <v-btn
                                             text
@@ -143,7 +145,7 @@
                                 </template>
                                 <v-list width="160">
                                     <v-list-item class="d-flex flex-column align-center mt-auto mb-auto" >
-                                    <v-list-item-title @click="registerdialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" width="126" v-bind="attrs" v-on="on">                                   
+                                    <v-list-item-title @click="registerdialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" width="126">                                   
                                         <v-dialog v-model="registerdialog" persistent max-width="600px">
                                             <template v-slot:activator="{ on, attrs }">
                                                 <v-col color="green lighten-5 black--text" class="px-0 d-flex flex-row justify-start" dark v-bind="attrs" v-on="on">
@@ -223,7 +225,7 @@
                                             </v-card>
                                         </v-dialog>
                                     </v-list-item-title>
-                                    <v-list-item-title @click="logindialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" v-bind="attrs" v-on="on">                                   
+                                    <v-list-item-title @click="logindialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start">                                   
                                         <v-dialog v-model="logindialog" persistent max-width="600px">
                                             <template v-slot:activator="{ on, attrs }">
                                                 <v-col color="green lighten-5 black--text" class="px-0 d-flex flex-row justify-start"  dark v-bind="attrs" v-on="on">
@@ -336,7 +338,7 @@
                                 </template> 
                                 <v-list width="160">
                                             <v-list-item class="d-flex flex-column align-center mt-auto mb-auto" >
-                                            <v-list-item-title @click="registerdialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" width="126" v-bind="attrs" v-on="on">                                   
+                                            <v-list-item-title @click="registerdialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" width="126">                                   
                                                 <v-dialog v-model="registerdialog" persistent max-width="600px">
                                                     <template v-slot:activator="{ on, attrs }">
                                                         <v-col color="green lighten-5 black--text" class="px-0 d-flex flex-row justify-start" dark v-bind="attrs" v-on="on">
@@ -416,7 +418,7 @@
                                                     </v-card>
                                                 </v-dialog>
                                             </v-list-item-title>
-                                            <v-list-item-title @click="logindialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start" v-bind="attrs" v-on="on">                                   
+                                            <v-list-item-title @click="logindialog = true" class="itmelistwidth px-0 d-flex flex-column justify-start">                                   
                                                 <v-dialog v-model="logindialog" persistent max-width="600px">
                                                     <template v-slot:activator="{ on, attrs }">
                                                         <v-col color="green lighten-5 black--text" class="px-0 d-flex flex-row justify-start"  dark v-bind="attrs" v-on="on">
@@ -482,48 +484,44 @@
     </v-container>
 </template>
 <script>
+
 export default {
     data: () => ({
-    date: null ,
-    mindate: new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-CA', {timeZone: 'EET'}),
-    mindate2: new Date(),
-    modal: false,
-    menu: false,
-    menu2: false,
-    e6: 1,
-    customers: [],
-    editCustomerId: null,
-    form: {
-      valid: false,
-      fields: { 
-
-                },
-      error:[],
-      rules: {
-
-      },
-    },
-    registerdialog:false,
-    logindialog: false,
+        date: null,
+        mindate: new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString("en-CA", { timeZone: "EET" }),
+        mindate2: new Date(),
+        modal: false,
+        menu: false,
+        menu2: false,
+        e6: 1,
+        customers: [],
+        editCustomerId: null,
+        form: {
+            valid: false,
+            fields: {},
+            error: [],
+            rules: {},
+        },
+        registerdialog: false,
+        logindialog: false,
     }),
-computed:{
-
-    pickerdate(){
-        const hour = this.mindate2.getHours();
-        if(hour < 18){
-            this.mindate = new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-CA', {timeZone: 'EET'});
-        }else if(hour >= 18){
-            this.mindate = new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-CA', {timeZone: 'EET'});
+    computed: {
+        pickerdate() {
+            const hour = this.mindate2.getHours();
+            if (hour < 18) {
+                this.mindate = new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString("en-CA", { timeZone: "EET" });
+            }
+            else if (hour >= 18) {
+                this.mindate = new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString("en-CA", { timeZone: "EET" });
+            }
+            const time = this.$moment(this.mindate2).isBetween("2023-01-01", "2023-10-30", undefined, "()");
+            console.log(time);
+            console.log(this.mindate);
+            console.log(hour);
+            return this.mindate;
         }
-        const time = this.$moment(this.mindate2).isBetween('2023-01-01', '2023-10-30', undefined, '()');
-        console.log(time)
-        console.log(this.mindate)
-        console.log(hour)
-        return this.mindate;
-    }
-},
-    methods:{
     },
+    methods: {},
 }
 </script>
 
